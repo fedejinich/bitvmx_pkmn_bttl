@@ -4,6 +4,6 @@
     .minimum_zig_version = "0.12.0",
     .paths = .{"."},
     .dependencies = .{
-        .pkmn = .{ .path = "../../.." },
+        .pkmn = .{ .path = "../engine/" },
     },
 }

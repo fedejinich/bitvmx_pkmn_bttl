@@ -1,17 +1,41 @@
-rm -rf zig-out &&\
-zig build &&\
-cp zig-out/bin/pkmn_guess ../bitvmx_protocol/BitVMX-CPU/pkmn_guess.elf &&\
-cp zig-out/bin/pkmn_guess ../bitvmx_protocol/execution_files/pkmn_guess.elf &&\
+#!/bin/bash
 
-cd ../bitvmx_protocol/BitVMX-CPU/ &&\
+# Exit the script if any command fails
+set -e
 
-# run program
-cargo run --release --bin emulator -- execute --elf pkmn_guess.elf --debug --checkpoints --input 00001234deadbeef --input-as-little &&\
+# Define paths
+BUILD_DIR="zig-out"
+OUTPUT_FILE=$BUILD_DIR"/bin/pkmn_guess"
+BITVMX_CPU_DIR="../bitvmx_protocol/BitVMX-CPU"
+ELF_FILE_NAME="pkmn_guess.elf"
 
-# generate rom-commitment and instruction_mapping
-cargo run -p emulator -- generate-rom-commitment --elf pkmn_guess.elf --sections > ../execution_files/pkmn_rom_commitment.txt &&\
-cargo run -p emulator -- instruction-mapping > ../execution_files/instruction_mapping.txt
+# Clean previous build
+echo "Cleaning previous build..."
+rm -rf $BUILD_DIR
 
-# cargo run --release --bin emulator -- execute --step 0 --list 20 --trace --limit 20 --input 00001234deadbeef --input-as-little --verify --debug
-# cargo run --release --bin emulator -- execute --elf pkmn_guess.elf --checkpoints --input 00001234 --input-as-little --trace --list 20  
-# todo extract shared paths into a variable
+# Build the project
+echo "Building project..."
+zig build
+
+# Copy the ELF file to the required directories
+echo "Copying $ELF_FILE_NAME to target directories..."
+cp $OUTPUT_FILE $BITVMX_CPU_DIR/$ELF_FILE_NAME
+cp $OUTPUT_FILE "../bitvmx_protocol/execution_files/"$ELF_FILE_NAME
+
+# Change to the BitVMX-CPU directory
+cd $BITVMX_CPU_DIR
+
+# Run the program
+echo "Running the program..."
+cargo run --release --bin emulator -- execute --elf $ELF_FILE_NAME --debug --checkpoints --input 00001234deadbeef --input-as-little
+
+# Generate ROM commitment
+echo "Generating ROM commitment..."
+cargo run --release --bin emulator -- generate-rom-commitment --elf $ELF_FILE_NAME --sections > ../execution_files/pkmn_rom_commitment.txt
+
+# Generate instruction mapping
+echo "Generating instruction mapping..."
+cargo run --release --bin emulator -- instruction-mapping > ../execution_files/instruction_mapping.txt
+
+echo "Build completed successfully!"
+
