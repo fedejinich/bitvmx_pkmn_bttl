@@ -1,6 +1,7 @@
 [submodule "bitvmx_protocol"]
 	path = bitvmx_protocol
-	url = git@github.com:FairgateLabs/bitvmx_protocol.git
+	url = git@github.com:fedejinich/bitvmx_protocol.git
+	branch = pkmn_guess
 [submodule "engine"]
 	path = engine
 	url = git@github.com:pkmn/engine.git
