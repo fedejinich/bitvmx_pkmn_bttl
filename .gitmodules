@@ -1,3 +1,6 @@
 [submodule "bitvmx_protocol"]
 	path = bitvmx_protocol
 	url = git@github.com:FairgateLabs/bitvmx_protocol.git
+[submodule "engine"]
+	path = engine
+	url = git@github.com:pkmn/engine.git
