@@ -39,9 +39,5 @@ cargo run --release --bin emulator -- generate-rom-commitment --elf $ELF_FILE_NA
 echo "Generating instruction mapping..."
 cargo run --release --bin emulator -- instruction-mapping > ../execution_files/instruction_mapping.txt
 
-echo "Generating execution trace..."
-cargo run --release --bin emulator -- execute --elf $ELF_FILE_NAME --input $INPUT --trace > ../verifier_files/execution_trace.txt
-cargo run --release --bin emulator -- execute --elf $ELF_FILE_NAME --input $INPUT --trace > ../prover_files/execution_trace.txt
-
 echo "Build completed successfully!"
 
