@@ -1,16 +1,17 @@
 #!/bin/bash
 
-# todo improve directories references
+INPUT=00001234 # set the input here
+
 # exit the script if any command fails
 set -e
 
 NAME="pkmn_bttl"
 
+# todo(fede) improve directories references
 BUILD_DIR="zig-out"
 OUTPUT_FILE=$BUILD_DIR"/bin/"$NAME
 BITVMX_CPU_DIR="../bitvmx_protocol/BitVMX-CPU"
 ELF_FILE_NAME=$NAME".elf"
-INPUT=00001234
 
 cd $NAME
 
