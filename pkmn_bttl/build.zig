@@ -25,11 +25,11 @@ pub fn build(b: *std.Build) void {
 
     // build elf
     const exe = b.addExecutable(.{
-        .name = "pkmn_guess",
+        .name = "pkmn_bttl",
         .root_source_file = if (@hasField(std.Build.LazyPath, "path"))
-            .{ .path = "pkmn_guess.zig" }
+            .{ .path = "pkmn_bttl.zig" }
         else
-            b.path("pkmn_guess.zig"),
+            b.path("pkmn_bttl.zig"),
         .optimize = optimize,
         .target = resolved_target,
     });
@@ -44,9 +44,9 @@ pub fn build(b: *std.Build) void {
 
     const test_mod = b.addTest(.{
         .root_source_file = if (@hasField(std.Build.LazyPath, "path"))
-            .{ .path = "pkmn_guess.zig" }
+            .{ .path = "pkmn_bttl.zig" }
         else
-            b.path("pkmn_guess.zig"),
+            b.path("pkmn_bttl.zig"),
         .optimize = optimize,
         .target = resolved_target,
     });

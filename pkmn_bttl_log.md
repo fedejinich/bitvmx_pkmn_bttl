@@ -1,4 +1,4 @@
-## setup
+## Setup
 ```json
 {
   "max_amount_of_steps": 51989,
@@ -25,7 +25,37 @@ class BitVMXWrapper:
         self.fail_actor_input = "prover"
 ```
 
-## prover 
+## On-chain transactions
+
+- Prover
+
+```
+Funding tx: 3adfdde71008e05fabcc63840e3b090b06b1f44d78fa05046ae0cb2cbed5276f
+Funding transaction: 6ed49d4152b695de706ccc19890fb082323d5d92633fda6f03e08043867fa42b
+Hash result revelation transaction: 49da88de1311b745397a8e03cec35b5417d347570a6ba9772cc3ba36f12f2df8
+Search hash iteration transaction 0: d54658cbe13ec7c4aca93fe93e6d03047cc8aaf92390e678ebaa7a9c9759952e
+Search hash iteration transaction 1: 25517268aaa1216edc6c660b8b4ba7e3948e31af173f503b1596ddc05b5758be
+Search hash iteration transaction 2: b87da1a5fc7db6e533cd158a50438caf4daf4129fa6eea90ad8c763d3d412d8a
+Search hash iteration transaction 3: 6c9a59b9dd59d315fccdf0a0832af9c0c38711b490c6f4983361351e8b5f7572
+Search hash iteration transaction 4: d9d2ed6671b518eadd9e7fb67e1e5c638629cfbe66b90277ef54b3190e3e87d5
+Search hash iteration transaction 5: d0ab7e0b7d920189e5cdd704cc587ad4f9e086265e6de7e73209d9012ad52448
+Trace transaction: 47e5ace9f77f47cefefb12458702d9c01b8f87ec6347afed6faa57677775e929
+```
+- Verifier
+```
+Trigger protocol transaction: 198d14eebf3092f2dd55daf8061158970a85c9e7678aba03bd85621ae4d9497f
+Search choice iteration transaction 0: 5eba1055cd8f1b829c25bc1460c6de4bc6500626a7f8fdc999c6b32db0751bec
+Search choice iteration transaction 1: 1c1dc4ad40164d9dbf283c73d421947980e566868851cc9bc1d0afebe0e57bba
+Search choice iteration transaction 2: b8c1e32d63dfa8b38f63794301befa99d5b0ec22d09a05491c7488f952499d0a
+Search choice iteration transaction 3: 954d4d3aa6a5499f820fad9f2b989f4cc0932e1dcaa5787561242364d31d07db
+Search choice iteration transaction 4: cefc68e69f8de3eabadfc0c8a13477a2ac2bcf1f3fb801969c984894d8d091fb
+Search choice iteration transaction 5: 37fc2e1c758e8851e0720fc9b994f7235ef3e6690487ba5d827429628bef61fb
+Trigger execution challenge transaction: 0320b5ff85d3659bccd615c0d1246bc041194e7c910bf8a9d33b237df7f71e22
+```
+
+## Logs
+
+### Prover logs
 ```bash
 [+] Running 1/0
  ✔ Container bitvmx_protocol-prover-backend-1  Created        0.0s
@@ -36,30 +66,18 @@ prover-backend-1  | INFO:     Application startup complete.
 prover-backend-1  | INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
 prover-backend-1  | INFO:     172.18.0.1:64486 - "GET /docs HTTP/1.1" 200 OK
 prover-backend-1  | INFO:     172.18.0.1:64486 - "GET /openapi.json HTTP/1.1" 200 OK
-prover-backend-1  | fede - setup fund from prover
 prover-backend-1  | Public keys generated: 0.09943580627441406
 prover-backend-1  | Funding tx: 3adfdde71008e05fabcc63840e3b090b06b1f44d78fa05046ae0cb2cbed5276f
 prover-backend-1  | Verifier public keys generated: 5197.625848293304
 prover-backend-1  | Bitcoin scripts generated: 5204.106069326401
-prover-backend-1  | fede3
-prover-backend-1  | fede4
-prover-backend-1  | fede5
-prover-backend-1  | prob
 prover-backend-1  | [45]
 prover-backend-1  | [StructuredScript { size: 25, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8 OP_0)), Call(10791093485084251662), Call(13234228732929855735)], script_map: {13234228732929855735: StructuredScript { size: 8, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0)), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(8036139062677729067), Call(273670838320084397), Call(12193961059090562603)], script_map: {8036139062677729067: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_1))], script_map: {} }, 273670838320084397: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_6))], script_map: {} }, 12193961059090562603: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8))], script_map: {} }, 11693102406951390485: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0))], script_map: {} }} }, 10791093485084251662: StructuredScript { size: 15, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0 OP_DUP OP_2DUP)), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406)], script_map: {16329752875843546406: StructuredScript { size: 2, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_2DUP OP_2DUP))], script_map: {} }} }} }]
 prover-backend-1  | [45]
 prover-backend-1  | [StructuredScript { size: 25, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8 OP_0)), Call(10791093485084251662), Call(13234228732929855735)], script_map: {13234228732929855735: StructuredScript { size: 8, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0)), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(8036139062677729067), Call(273670838320084397), Call(12193961059090562603)], script_map: {11693102406951390485: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0))], script_map: {} }, 273670838320084397: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_6))], script_map: {} }, 8036139062677729067: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_1))], script_map: {} }, 12193961059090562603: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8))], script_map: {} }} }, 10791093485084251662: StructuredScript { size: 15, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0 OP_DUP OP_2DUP)), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406)], script_map: {16329752875843546406: StructuredScript { size: 2, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_2DUP OP_2DUP))], script_map: {} }} }} }]
-prover-backend-1  | this
-prover-backend-1  | a
-prover-backend-1  | fede6
 prover-backend-1  | Call parallel hashed merkle root
 prover-backend-1  | End of parallel hashed merkle root in 4.017148260275523 minutes.
-prover-backend-1  | fede9
-prover-backend-1  | fede10
-prover-backend-1  | fede11
 prover-backend-1  | [45]
 prover-backend-1  | [StructuredScript { size: 25, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8 OP_0)), Call(10791093485084251662), Call(13234228732929855735)], script_map: {10791093485084251662: StructuredScript { size: 15, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0 OP_DUP OP_2DUP)), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406)], script_map: {16329752875843546406: StructuredScript { size: 2, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_2DUP OP_2DUP))], script_map: {} }} }, 13234228732929855735: StructuredScript { size: 8, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0)), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(8036139062677729067), Call(273670838320084397), Call(12193961059090562603)], script_map: {11693102406951390485: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0))], script_map: {} }, 8036139062677729067: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_1))], script_map: {} }, 273670838320084397: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_6))], script_map: {} }, 12193961059090562603: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8))], script_map: {} }} }} }]
-prover-backend-1  | fede12
 prover-backend-1  | Transactions built: 9365.604847669601
 prover-backend-1  | Signatures generated: 9382.88067150116
 prover-backend-1  | Verifier signatures sent: 9415.165404558182
@@ -276,7 +294,7 @@ prover-backend-1  |
 
 ```
 
-## verifier
+### Verifier's logs
 
 ```bash
 ❯ docker compose up verifier-backend                    [14:54:16]
@@ -287,7 +305,6 @@ verifier-backend-1  | INFO:     Started server process [1]
 verifier-backend-1  | INFO:     Waiting for application startup.
 verifier-backend-1  | INFO:     Application startup complete.
 verifier-backend-1  | INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
-verifier-backend-1  | fede - setup fund from verifier
 verifier-backend-1  | Init setup for id f63e16e8-07c4-4398-bb4f-6e5c954958ef
 verifier-backend-1  | INFO:     172.18.0.1:64264 - "POST /api/v1/setup HTTP/1.1" 200 OK
 verifier-backend-1  | Call generate public keys: 0.0014543533325195312
@@ -300,19 +317,10 @@ verifier-backend-1  | [45]
 verifier-backend-1  | [StructuredScript { size: 25, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8 OP_0)), Call(10791093485084251662), Call(13234228732929855735)], script_map: {10791093485084251662: StructuredScript { size: 15, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0 OP_DUP OP_2DUP)), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406)], script_map: {16329752875843546406: StructuredScript { size: 2, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_2DUP OP_2DUP))], script_map: {} }} }, 13234228732929855735: StructuredScript { size: 8, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0)), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(8036139062677729067), Call(273670838320084397), Call(12193961059090562603)], script_map: {11693102406951390485: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0))], script_map: {} }, 8036139062677729067: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_1))], script_map: {} }, 273670838320084397: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_6))], script_map: {} }, 12193961059090562603: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8))], script_map: {} }} }} }]
 verifier-backend-1  | this
 verifier-backend-1  | Call transactions time: 4780.107640028
-verifier-backend-1  | fede3
-verifier-backend-1  | fede4
-verifier-backend-1  | fede5
-verifier-backend-1  | a
-verifier-backend-1  | fede6
 verifier-backend-1  | Call parallel hashed merkle root
 verifier-backend-1  | End of parallel hashed merkle root in 3.9241795500119525 minutes.
-verifier-backend-1  | fede9
-verifier-backend-1  | fede10
-verifier-backend-1  | fede11
 verifier-backend-1  | [45]
 verifier-backend-1  | [StructuredScript { size: 25, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8 OP_0)), Call(10791093485084251662), Call(13234228732929855735)], script_map: {10791093485084251662: StructuredScript { size: 15, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0 OP_DUP OP_2DUP)), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406), Call(16329752875843546406)], script_map: {16329752875843546406: StructuredScript { size: 2, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::hash::sha256_u4::padding", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_2DUP OP_2DUP))], script_map: {} }} }, 13234228732929855735: StructuredScript { size: 8, stack_hint: None, debug_identifier: "bitvm::hash::sha256_u4::padding bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0)), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(11693102406951390485), Call(8036139062677729067), Call(273670838320084397), Call(12193961059090562603)], script_map: {8036139062677729067: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_1))], script_map: {} }, 273670838320084397: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_6))], script_map: {} }, 12193961059090562603: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_PUSHNUM_8))], script_map: {} }, 11693102406951390485: StructuredScript { size: 1, stack_hint: None, debug_identifier: "bitvm::u4::u4_std::u4_number_to_nibble bitvm::u4::u4_std::u4_number_to_nibble", num_unclosed_ifs: 0, unclosed_if_positions: [], extra_endif_positions: [], max_if_interval: (0, 0), blocks: [Script(Script(OP_0))], script_map: {} }} }} }]
-verifier-backend-1  | fede12
 verifier-backend-1  | Call create protocol setup properties time: 5184.681234836578
 verifier-backend-1  | Public keys controller total time: 5196.9925100803375
 verifier-backend-1  | INFO:     172.18.0.1:64266 - "POST /api/v1/public_keys HTTP/1.1" 200 OK
@@ -398,8 +406,8 @@ verifier-backend-1  | Trigger execution challenge transaction: 0320b5ff85d3659bc
 verifier-backend-1  | INFO:     172.18.0.1:64478 - "POST /api/v1/next_step HTTP/1.1" 200 OK
 ```
 
-## regtest
 
+## bitcoin-regtest-node logs
 ```bash
 ❯ docker compose up bitcoin-regtest-node                                                                                    [14:57:15]
 [+] Running 1/0

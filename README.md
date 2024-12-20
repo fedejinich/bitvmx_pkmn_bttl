@@ -1,4 +1,4 @@
-# PKMN_GUESS
+# PKMN_BTTL
 
 Requirements
 - Zig
