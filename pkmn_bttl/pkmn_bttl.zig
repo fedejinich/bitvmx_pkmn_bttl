@@ -13,18 +13,7 @@ const BATTLE_OPTIONS = pkmn.battle.options(
 const CHOICE_1 = pkmn.Choice{ .type = .Move, .data = 1 };
 
 pub export fn main() u32 {
-    const result = run();
-    if (result != 0) {
-        @panic("Unexpected error");
-    }
-
-    return result;
-}
-
-pub fn run() u32 {
-    const input_ptr: *volatile u32 = @ptrFromInt(INPUT_ADDRESS);
-
-    const pokemon: pkmn.gen1.helpers.Pokemon = pokemon_by(input_ptr);
+    const pokemon: pkmn.gen1.helpers.Pokemon = pokemon_by(@ptrFromInt(INPUT_ADDRESS));
 
     var battle = pkmn.gen1.helpers.Battle.init(SEED, &.{pokemon}, &.{
         .{
@@ -42,10 +31,7 @@ pub fn run() u32 {
 
     return switch (result.type) {
         .Win => 0,
-        .Lose => @panic("battle lost"),
-        .Tie => @panic("battle tied"),
-        .None => @panic("battle should have ended"),
-        .Error => unreachable, // we'd panic before this
+        else => @panic("battle did not result in a win"),
     };
 }
 
