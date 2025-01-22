@@ -1,6 +1,6 @@
 # Game Run Details
 
-In this document you can find more details about the game run described in the [web article]().
+In this document you can find more details about the game run described in the [web article.](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/)
 
 ## Setup
 
@@ -36,27 +36,26 @@ class BitVMXWrapper:
 
 - **Prover**
 
-  Funding tx: fff64f77c46c3ca1eb01a26cddc14e589684fc66d0ed996d5c3ae980f324e6bb  
-  Funding transaction: 370d0be10e23d444588d16be898c170878dba2a8267b729faf3a12e0af536052  
-  Hash result revelation transaction: 40f3464a4db089238235d00d3be1b9cc329248d6454cb4c3d60e021f37a141ae  
-  Search hash iteration transaction 0: df94beabf1207bd3bf9888928fde2ffd1ce8ff04f4eef027c5b1ec7de15b36a8  
-  Search hash iteration transaction 1: 8a0f96fdd707308932c1c57b72af6a9724fc3e81759b0e988d940458b1d26f97  
-  Search hash iteration transaction 2: b078a44ff0b029456d44fceca2ad690104a521a6da2539c1a5dbdf3f70498134  
-  Search hash iteration transaction 3: ddc013e207e585dbee9abce6bfc56f08b104453f819b8cc7f498c5e2e3f520ce  
-  Search hash iteration transaction 4: 1e379c1b9a3069af49c2f192594ba943c106fdc15e1815da35a3ab18bc2994a2  
-  Search hash iteration transaction 5: da0f186dea22d944d0d6322ea8f3abc2ad0734ee37cbc4c5d6ca34784e99457d  
-  Trace transaction: fa021ce3fe4f664f2733eefd8abcc51f59d622e0652d63215e66da6cde35d764  
+  Funding transaction: 370d0be10e23d444588d16be898c170878dba2a8267b729faf3a12e0af536052
+  Hash result revelation transaction: 40f3464a4db089238235d00d3be1b9cc329248d6454cb4c3d60e021f37a141ae
+  Search hash iteration transaction 0: df94beabf1207bd3bf9888928fde2ffd1ce8ff04f4eef027c5b1ec7de15b36a8
+  Search hash iteration transaction 1: 8a0f96fdd707308932c1c57b72af6a9724fc3e81759b0e988d940458b1d26f97
+  Search hash iteration transaction 2: b078a44ff0b029456d44fceca2ad690104a521a6da2539c1a5dbdf3f70498134
+  Search hash iteration transaction 3: ddc013e207e585dbee9abce6bfc56f08b104453f819b8cc7f498c5e2e3f520ce
+  Search hash iteration transaction 4: 1e379c1b9a3069af49c2f192594ba943c106fdc15e1815da35a3ab18bc2994a2
+  Search hash iteration transaction 5: da0f186dea22d944d0d6322ea8f3abc2ad0734ee37cbc4c5d6ca34784e99457d
+  Trace transaction: fa021ce3fe4f664f2733eefd8abcc51f59d622e0652d63215e66da6cde35d764
 
 - **Verifier**
 
-  Trigger protocol transaction: 216e7614dcb8648c395429a1d6d2654d61cca621bff079c1f9debc7d9c0c15e2  
-  Search choice iteration transaction 0: 2ba8e9090eca02979b58d43835cbbb8bbb065973838b0fbc69008d43be03ff00  
-  Search choice iteration transaction 1: dd8f1a2ab4e387179b75fb7b9721964b127ced02fcd1382de1b4fa8bb185e215  
-  Search choice iteration transaction 2: f4ff5ff29b6ee51d39d3e9adeac595a1a510c4ebf3cb132eb3ff16af276ccd93  
-  Search choice iteration transaction 3: 2729f2b42eabcd80f2fc6267c7a4777e1b52fe4fd517740ddac79aafed68c657  
-  Search choice iteration transaction 4: d590d772cd88dfd2afedce5d0b9029150893c1fc23c4722c9906fdb28c1336c4  
-  Search choice iteration transaction 5: e327e398d0d94f4a4fbe3f4fc5089acbf0ebcba8a77cb0a6fc5ad3760890f3bc  
-  Trigger execution challenge transaction: c7874f513aae8faeef9f42866add164d79d2bddf1d2dc4fe8c2cb8cac30112d4  
+  Trigger protocol transaction: 216e7614dcb8648c395429a1d6d2654d61cca621bff079c1f9debc7d9c0c15e2
+  Search choice iteration transaction 0: 2ba8e9090eca02979b58d43835cbbb8bbb065973838b0fbc69008d43be03ff00
+  Search choice iteration transaction 1: dd8f1a2ab4e387179b75fb7b9721964b127ced02fcd1382de1b4fa8bb185e215
+  Search choice iteration transaction 2: f4ff5ff29b6ee51d39d3e9adeac595a1a510c4ebf3cb132eb3ff16af276ccd93
+  Search choice iteration transaction 3: 2729f2b42eabcd80f2fc6267c7a4777e1b52fe4fd517740ddac79aafed68c657
+  Search choice iteration transaction 4: d590d772cd88dfd2afedce5d0b9029150893c1fc23c4722c9906fdb28c1336c4
+  Search choice iteration transaction 5: e327e398d0d94f4a4fbe3f4fc5089acbf0ebcba8a77cb0a6fc5ad3760890f3bc
+  Trigger execution challenge transaction: c7874f513aae8faeef9f42866add164d79d2bddf1d2dc4fe8c2cb8cac30112d4
 
 ## Build
 
