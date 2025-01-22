@@ -14,13 +14,7 @@ You can read more about the game in the [following article]() and more about Bit
 - Clone all the submodules
 - Python (optional)
 
-To clone all the submodules run at the PROJECT_ROOT:
-
-```bash
-git submodule update --init --recursive && cd bitvmx_protocol && git checkout bitvmx_pkmn_bttl && cd ..
-```
-
-NOTE: `bitvmx_protocol` submodule should be pointing to the `bitvmx_pkmn_bttl` branch.
+NOTE: This project requires to clone all the submodules. `bitvmx_protocol` submodule should be pointing to `bitvmx_pkmn_bttl` branch.
 
 ## Structure
 
@@ -38,9 +32,9 @@ NOTE: `bitvmx_protocol` submodule should be pointing to the `bitvmx_pkmn_bttl` b
 ## Run
 
 Running the game involves setting up a BitVMX environment and acting as a prover that tries to compute the right output. To do that you can follow the next steps:
-1. Rename the `bitvmx_protocol/.example_env_*` files into `bitvmx_protocol/.env_*`
-1. Specify the selected input at `build.sh` INPUT
-3. Build the Pokemon program with `build.sh`
+1. Run the initialization script `init.sh`
+2. Specify the selected input at `build.sh` INPUT
+3. Build the Pokemon program by running `build.sh`
 4. Last, but definitely not least, validate the output with BitVMX as explained in the [article]() :)
 
 NOTE: You can modify `bitvmx_protocol/../execution_trace_generation_service.py` to try different challenge scenarios.
