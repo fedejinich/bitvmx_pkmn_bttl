@@ -24,6 +24,7 @@ zig build
 echo "Copying $ELF_FILE_NAME to CPU directories..."
 cp $OUTPUT_FILE $BITVMX_CPU_DIR/$ELF_FILE_NAME
 cp $OUTPUT_FILE $BITVMX_CPU_DIR/docker-riscv32/riscv32/build/$ELF_FILE_NAME
+cp $OUTPUT_FILE "../pkmn_bttl/"$ELF_FILE_NAME
 mkdir -p "../bitvmx_protocol/execution_files" && cp -p $OUTPUT_FILE "../bitvmx_protocol/execution_files/"$ELF_FILE_NAME
 
 echo "Running the program..."
