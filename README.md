@@ -8,13 +8,12 @@ You can read more about the game in the [following article](https://blog.rootsto
 
 ## Requirements
 
-- Zig
+- Zig 0.13.0
 - Rust
 - Docker
 - Clone all the submodules
+  - `bitvmx_protocol` submodule must point `bitvmx_pkmn_bttl` branch
 - Python (optional)
-
-NOTE: The `bitvmx_protocol` submodule must point to the `bitvmx_pkmn_bttl` branch.
 
 ## Structure
 
@@ -23,8 +22,9 @@ NOTE: The `bitvmx_protocol` submodule must point to the `bitvmx_pkmn_bttl` branc
 ├── bitvmx_protocol/ # BitVMX (submodule)
 ├── engine/ # Pokemon battle engine (submodule)
 ├── pkmn_bttl/ # The game
-├── build.sh # Build script
-├── init.sh # Initialization script
+├── build.sh # Build script for 'pkmn_bttl' (builds the game, runs it on the CPU emulator and places the output in the necessary folders)
+├── build_test_input.sh # Build script for 'test_input' (a reduced example)
+├── init.sh # Initialization script (clones submodules, creates aux folders and '.env_' files)
 ├── img.jpg
 ├── README.md
 └── game_run_details.md # Detailed explanation of the game run (linked in the article)
