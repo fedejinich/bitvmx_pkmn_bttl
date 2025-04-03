@@ -8,7 +8,7 @@ You can read more about the game in the [following article](https://blog.rootsto
 
 ---
 
-NOTE: the [first article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/) is based on the `regtest` branch, `master` branch corresponds to the second part of the article where we run the game on mutinynet.
+NOTE: the [first article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/) is based on the `regtest` branch, while `master` branch corresponds to the second part of the article where we run the game on Mutinynet.
 
 ## Requirements
 
@@ -34,9 +34,7 @@ NOTE: the [first article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-
 └── README.md
 ```
 
-## Run
-
-Running the game involves setting up a BitVMX environment and acting as a prover that tries to compute the right output. To do that you can follow the next steps:
+## Initialization
 
 - Run the initialization script `init.sh`
 
@@ -44,13 +42,29 @@ Running the game involves setting up a BitVMX environment and acting as a prover
 ./init.sh
 ```
 
-- Specify the selected input at `build.sh` INPUT and build the Pokemon program by running the build script
-  - This script validates that the program succeeds (using the right input) and moves it into the required folders for later verification.
+This script clones the right submodules and creates the necessary folders.
+
+## Run
+
+Running the game involves setting up a BitVMX environment and acting as a prover that tries to compute the right output. To do that you can follow the next steps:
+
+- Specify the input at `build.sh` INPUT and build the Pokemon program by running the build script
+  - This validates that the program succeeds and moves the generated binary into the required folders for later verification.
 
 ```bash
 ./build.sh
 ```
 
-- Last, but definitely not least, setup a BitVMX environment and validate the proof (the program with the right input) as explained in the [article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/) :)
-  - Start from "Running on Bitcoin - Step 5. Start services"
+- Run `prover` and `verifier` docker services.
+  - at `bitvmx_protocol/`
+  - `docker compose up prover-backend`
+  - `docker compose up verifier-backend`
+- Generate setup parameters by running `bitvmx_protocol/setup_mutiny.py`.
+- Fund the generated address.
+  - You can use the [Mutinynet faucet](https://faucet.mutinynet.com/).
+- Open the Swagger UI at `http://0.0.0.0:8081/docs#/v1`
+- Call `setup/` endpoint with the generated parameters
+  - Remember to replace `funding_tx_id` and `funding_index`
+- Call `input/` with the `setup_uuid` generated in the previous step.
+- Call `next_step` with the same `setup_uuid` to verify the game (program).
   - You can modify `bitvmx_protocol/../execution_trace_generation_service.py` to try different challenge scenarios.
