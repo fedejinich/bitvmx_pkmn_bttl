@@ -6,6 +6,10 @@ This project is a simple Bitcoin-Pokemon game created to showcase BitVMX, a prot
 
 You can read more about the game in the [following article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/) and more about BitVMX [here](https://bitvmx.org/).
 
+---
+
+NOTE: the [first article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/) is based on the `regtest` branch, `master` branch corresponds to the second part of the article where we run the game on mutinynet.
+
 ## Requirements
 
 - Zig 0.13.0
