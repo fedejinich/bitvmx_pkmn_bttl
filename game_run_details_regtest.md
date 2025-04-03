@@ -1,6 +1,7 @@
-# Game Run Details
+# Game Run Details (Regtest)
 
 In this document you can find more details about the game run described in the [web article.](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/)
+NOTE: the original article was tested on regtest, there's an new article that tests the same game on mutinynet (another bitcoin testnet) focused on the analysis of the on-chain transactions.
 
 ## Setup
 
