@@ -6,6 +6,10 @@ This project is a simple Bitcoin-Pokemon game created to showcase BitVMX, a prot
 
 You can read more about the game in the [following article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/) and more about BitVMX [here](https://bitvmx.org/).
 
+---
+
+NOTE: the [first article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/) is based on the `regtest` branch, `master` branch corresponds to the second part of the article where we run the game on mutinynet.
+
 ## Requirements
 
 - Zig 0.13.0
@@ -21,13 +25,13 @@ You can read more about the game in the [following article](https://blog.rootsto
 .
 ├── bitvmx_protocol/ # BitVMX (submodule)
 ├── engine/ # Pokemon battle engine (submodule)
+├── game_runs/ # Detailed data about game runs in each environment (mutinynet and regtest)
 ├── pkmn_bttl/ # The game
-├── build.sh # Build script for 'pkmn_bttl' (builds the game, runs it on the CPU emulator and places the output in the necessary folders)
-├── build_test_input.sh # Build script for 'test_input' (a reduced example)
-├── init.sh # Initialization script (clones submodules, creates aux folders and '.env_' files)
+├── build.sh # Build script for 'pkmn_bttl'
+├── build_test_input.sh # Build script for 'test_input' (an out of scope and reduced BitVMX program example)
+├── init.sh # Initialization script
 ├── img.jpg
-├── README.md
-└── game_run_details.md # Detailed explanation of the game run (linked in the article)
+└── README.md
 ```
 
 ## Run
@@ -41,12 +45,12 @@ Running the game involves setting up a BitVMX environment and acting as a prover
 ```
 
 - Specify the selected input at `build.sh` INPUT and build the Pokemon program by running the build script
-  - This validates (optional) that the program succeeds using the right input and moves it into the required folders.
+  - This script validates that the program succeeds (using the right input) and moves it into the required folders for later verification.
 
 ```bash
 ./build.sh
 ```
 
-- Last, but definitely not least, setup a BitVMX environment and validate the proof (the program with the right input) as explained in the [article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/) :).
+- Last, but definitely not least, setup a BitVMX environment and validate the proof (the program with the right input) as explained in the [article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-battle-game-written-in-zig-and-executed-with-bitvmx/) :)
   - Start from "Running on Bitcoin - Step 5. Start services"
   - You can modify `bitvmx_protocol/../execution_trace_generation_service.py` to try different challenge scenarios.
