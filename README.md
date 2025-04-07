@@ -24,11 +24,10 @@ NOTE: the [first article](https://blog.rootstock.io/noticia/pkmn_bttl-a-pokemon-
 ```bash
 .
 ├── bitvmx_protocol/ # BitVMX (submodule)
+├── build_scripts/ # Scripts to build the project
 ├── engine/ # Pokemon battle engine (submodule)
-├── game_runs/ # Detailed data about game runs in each environment (mutinynet and regtest)
+├── game_runs/ # Detailed data about game runs for each environment (mutinynet and regtest)
 ├── pkmn_bttl/ # The game
-├── build.sh # Build script for 'pkmn_bttl'
-├── build_test_input.sh # Build script for 'test_input' (an out of scope and reduced BitVMX program example)
 ├── init.sh # Initialization script
 ├── img.jpg
 └── README.md
@@ -50,16 +49,12 @@ Running the game involves setting up a BitVMX environment and acting as a prover
 
 - Specify the input at `build.sh` INPUT and build the Pokemon program by running the build script
   - This validates that the program succeeds and moves the generated binary into the required folders for later verification.
-
-```bash
-./build.sh
-```
-
+- Run `./build_scripts/build.sh`
 - Run `prover` and `verifier` docker services.
   - at `bitvmx_protocol/`
   - `docker compose up prover-backend`
   - `docker compose up verifier-backend`
-- Generate setup parameters by running `bitvmx_protocol/setup_mutiny.py`.
+- Generate setup parameters by running `build_scripts/setup_mutiny.py`.
 - Fund the generated address.
   - You can use the [Mutinynet faucet](https://faucet.mutinynet.com/).
 - Open the Swagger UI at `http://0.0.0.0:8081/docs#/v1`

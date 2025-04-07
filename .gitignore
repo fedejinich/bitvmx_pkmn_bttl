@@ -1,3 +1,5 @@
 pkmn_bttl/zig-cache/
-pkmn_bttl/checkpoint*
 pkmn_bttl/*.elf
+build_scripts/checkpoint*
+pkmn_bttl/checkpoint*
+checkpoint*
