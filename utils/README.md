@@ -89,3 +89,9 @@ python calcular_tarifa_media.py
 - Visualize historical fee trends.
 - Determine the best timing to broadcast large transactions.
 - Estimate the cost of publishing a BitVMX proof at different times of the month.
+
+### TODO
+
+- use this dune chart as source
+
+<https://dune.com/dataalways/bitcoin-fee-tracker>
