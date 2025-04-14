@@ -79,10 +79,10 @@ In this section we can see a summary of how many virtual bytes where consumed by
 | Player       | Virtual Bytes | Cost (2.4 sat/vB) |
 |--------------|----------------|------------------|
 | **Prover**   | ~75301.25 vB   | 180723 sat       |
-| **Verifier** | ~7908.25 vB    | 18979.8 sat      |
+| **Verifier** | ~ 7908.25 vB    |  18979.8 sat      |
 | **TOTAL**    | ~83209.5 vB    | 199702.8 sat     |
 
-For the table above we calculated the costs (in sats) using an average of the median sat/vb during march 2025. Data supplied by blockchian.info
+For the table above we calculated the costs (in sats) using an average of the median sat/vb during march 2025. Data supplied by this [dune](https://dune.com/queries/3030786/5037424) chart.
 
 ## Build Logs
 
