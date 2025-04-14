@@ -76,11 +76,11 @@ This run produced this setup_uuid:
 
 In this section we can see a summary of how many virtual bytes where consumed by each player and the cost (sat/vByte) for each one.
 
-| Player       | Raw Bytes     | Virtual Bytes | Cost (2.4 sat/vB) |
-|--------------|---------------|----------------|------------------|
-| **Prover**   | 326,186.5 B   | ~75301.25 vB     | 180723 sat      |
-| **Verifier** | 30,401.16 B   | ~7908.25 vB      | 18979,8 sat       |
-| **TOTAL**    | 356,587.66 B  | ~83209.5 vB     | 199702,8 sat      |
+| Player       | Virtual Bytes | Cost (2.4 sat/vB) |
+|--------------|----------------|------------------|
+| **Prover**   | ~75301.25 vB   | 180723 sat       |
+| **Verifier** | ~7908.25 vB    | 18979.8 sat      |
+| **TOTAL**    | ~83209.5 vB    | 199702.8 sat     |
 
 For the table above we calculated the costs (in sats) using an average of the median sat/vb during march 2025. Data supplied by blockchian.info
 
