@@ -47,17 +47,17 @@ This run produced this setup_uuid:
 
 #### Prover Transactions
 
-| Tx                               | Txid            | Raw Size   | Virtual Size  | Explorer |
+| Tx                               | Txid            | Raw Size   | Virtual Size (vB)  | Explorer |
 |----------------------------------|------------------|------------|----------------|----------|
 | Funding (setup)                  | `5926...732a`    | 203 b      | 121.25 vB      | [link](https://mutinynet.com/tx/59260293fb9b17118bd3c5eeecb1145c691dde1985b8deca4c9eff8a79b9732a) |
-| Hash result revelation           | `2743...6d26`    | 8.8 KB     | 2.27 kvB       | [link](https://mutinynet.com/tx/2743a8be44602235e8d8b89459c23e1b9ec4fd3a865300be99d02b7fad9a6d26) |
-| Search hash iteration 0          | `b84a...46ac`    | 46 KB      | 11.57 kvB      | [link](https://mutinynet.com/tx/b84a4e2f567d7da60000bffb16377a8b90535159c2c03bd12d41134e0e8446ac) |
-| Search hash iteration 1          | `29db...7f73`    | 46.29 KB   | 11.64 kvB      | [link](https://mutinynet.com/tx/29dbfc12f4310ed6d38adb9431e296be18dc26dfa3d3eb492ad7618e4d047f73) |
-| Search hash iteration 2          | `814d...7233`    | 46.29 KB   | 11.64 kvB      | [link](https://mutinynet.com/tx/814dd48f1214fb05d9626b7c1b7dfe3169f4920fd7b9901675f2c1c3f577d233) |
-| Search hash iteration 3          | `c97a...fcdf`    | 46.3 KB    | 11.65 kvB      | [link](https://mutinynet.com/tx/c97abf94a593338465d0ba9a3a2d7eacb7dafc1535bd189657b05ab4c374fcdf) |
-| Search hash iteration 4          | `b92b...a428`    | 46.3 KB    | 11.65 kvB      | [link](https://mutinynet.com/tx/b92bcf559cd824b20cf86b76ad58e8bfc366c11ff5ee2ae6dfdb20f9c8b9a428) |
-| Search hash iteration 5          | `51f7...dbda`    | 46.28 KB   | 11.64 kvB      | [link](https://mutinynet.com/tx/51f7d446e7abfd090ea1ea3a7c082d7c3a2bcc5078c717f445d19a5460a5dbda) |
-| Trace transaction                | `657b...1626`    | 12.8 KB    | 3.12 kvB       | [link](https://mutinynet.com/tx/657bc62335aee81b4313d0ef6b7b410eff3553a6209b71758d86f8f11fcb1626) |
+| Hash result revelation           | `2743...6d26`    | 8.8 KB     |  2270 vB       | [link](https://mutinynet.com/tx/2743a8be44602235e8d8b89459c23e1b9ec4fd3a865300be99d02b7fad9a6d26) |
+| Search hash iteration 0          | `b84a...46ac`    | 46 KB      | 11570 vB      | [link](https://mutinynet.com/tx/b84a4e2f567d7da60000bffb16377a8b90535159c2c03bd12d41134e0e8446ac) |
+| Search hash iteration 1          | `29db...7f73`    | 46.29 KB   | 11640 vB      | [link](https://mutinynet.com/tx/29dbfc12f4310ed6d38adb9431e296be18dc26dfa3d3eb492ad7618e4d047f73) |
+| Search hash iteration 2          | `814d...7233`    | 46.29 KB   | 11640 vB      | [link](https://mutinynet.com/tx/814dd48f1214fb05d9626b7c1b7dfe3169f4920fd7b9901675f2c1c3f577d233) |
+| Search hash iteration 3          | `c97a...fcdf`    | 46.3 KB    | 11650 vB      | [link](https://mutinynet.com/tx/c97abf94a593338465d0ba9a3a2d7eacb7dafc1535bd189657b05ab4c374fcdf) |
+| Search hash iteration 4          | `b92b...a428`    | 46.3 KB    | 11650 vB      | [link](https://mutinynet.com/tx/b92bcf559cd824b20cf86b76ad58e8bfc366c11ff5ee2ae6dfdb20f9c8b9a428) |
+| Search hash iteration 5          | `51f7...dbda`    | 46.28 KB   | 11640 vB      | [link](https://mutinynet.com/tx/51f7d446e7abfd090ea1ea3a7c082d7c3a2bcc5078c717f445d19a5460a5dbda) |
+| Trace transaction                | `657b...1626`    | 12.8 KB    | 3120 vB       | [link](https://mutinynet.com/tx/657bc62335aee81b4313d0ef6b7b410eff3553a6209b71758d86f8f11fcb1626) |
 
 #### Verifier Transactions
 
@@ -70,17 +70,21 @@ This run produced this setup_uuid:
 | Search choice iteration 3        | `f819...4dd1`    | 514 b      | 199 vB        | [link](https://mutinynet.com/tx/f8190f60b5795c3103357245311c4735eacdd770d9d49e9f98bd9d74d7874dd1) |
 | Search choice iteration 4        | `a679...1d9a`    | 515 b      | 199.25 vB     | [link](https://mutinynet.com/tx/a67980a12f033d211c63c680be686b823c93484021a72ad30866e8023dc51d9a) |
 | Search choice iteration 5        | `db76...972d`    | 515 b      | 199.25 vB     | [link](https://mutinynet.com/tx/db7688f9d4b62731ea863ca6cc1bd3a0663da62000ad9e11e2b76abf2f05972d) |
-| Trigger execution challenge      | `4a1e...6019`    | 23.96 kb   | 6.06 kvB      | [link](https://mutinynet.com/tx/4a1ec3a97638b267a327927e0676358b2af6db6bb078d3d858feb4595c286019) |
+| Trigger execution challenge      | `4a1e...6019`    | 23.96 kb   | 6060 vB      | [link](https://mutinynet.com/tx/4a1ec3a97638b267a327927e0676358b2af6db6bb078d3d858feb4595c286019) |
 
-#### Totals
+#### Summary
 
-| Player | Raw Bytes | Virtual Bytes |
-|------------|---------------|------------------|
-| **Prover**   | 326,186.5 B   | ~ 75,18 kvB    |
-| **Verifier** | 30,401.16 B   | ~  7.86 kvB       |
-| **TOTAL**    | **356,587.66 B** | **~ 83.04 kvB**     |
+In this section we can see a summary of how many virtual bytes where consumed by each player and the cost (sat/vByte) for each one.
 
-## Build
+| Player       | Raw Bytes     | Virtual Bytes | Cost (2.4 sat/vB) |
+|--------------|---------------|----------------|------------------|
+| **Prover**   | 326,186.5 B   | ~75301.25 vB     | 180723 sat      |
+| **Verifier** | 30,401.16 B   | ~7908.25 vB      | 18979,8 sat       |
+| **TOTAL**    | 356,587.66 B  | ~83209.5 vB     | 199702,8 sat      |
+
+For the table above we calculated the costs (in sats) using an average of the median sat/vb during march 2025. Data supplied by blockchian.info
+
+## Build Logs
 
 ```bash
   Step: 9999 PC: 0x8005ba8c:0 Opcode: 0x00158593 Instruction: Addi(IType(1410451))
