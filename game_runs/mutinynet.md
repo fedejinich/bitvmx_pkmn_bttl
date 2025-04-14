@@ -61,7 +61,7 @@ This run produced this setup_uuid:
 
 #### Verifier Transactions
 
-| Tx                               | Txid            | Raw Size   | Virtual Size | Explorer |
+| Tx                               | Txid            | Raw Size   | Virtual Size (vB) | Explorer |
 |----------------------------------|------------------|------------|---------------|----------|
 | Trigger protocol                 | `e25a...9c84`    | 2.33 kb    | 653.75 vB     | [link](https://mutinynet.com/tx/e25a3fd6bdced8b37f7ba667f48f257ea2c4583f65c6584f7edef9f7d4f09c84) |
 | Search choice iteration 0        | `c3fd...66c8`    | 514 b      | 199 vB        | [link](https://mutinynet.com/tx/c3fdc659598a6d157a65cbd70f8fb0205dd5c71398467415b2f82304823c66c8) |
