@@ -84,6 +84,19 @@ In this section we can see a summary of how many virtual bytes where consumed by
 
 For the table above we calculated the costs (in sats) using an average of the median sat/vb during march 2025. Data supplied by this [dune chart](https://dune.com/queries/3030786/5037424).
 
+#### Detailed Summary
+
+| Protocolo                     | Prover (vB) | Verifier (vB) |
+|------------------------------|-------------|---------------|
+| Funding                      | 121.25      | –             |
+| Hash Result Revelation       | 2270        | –             |
+| Search Hash Iterations       | 69790       | –             |
+| Trace Transaction            | 3120        | –             |
+| Trigger Protocol             | –           | 653.75        |
+| Search Choice Iterations     | –           | 1194.5        |
+| Trigger Exec Challenge       | –           | 6060          |
+| **TOTAL per Player**        | **75301.25**| **7908.25**   |
+
 ## Build Logs
 
 ```bash
