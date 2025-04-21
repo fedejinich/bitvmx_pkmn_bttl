@@ -86,7 +86,7 @@ For the table above we calculated the costs (in sats) using an average of the me
 
 #### Detailed Summary
 
-| Protocolo                     | Prover (vB) | Verifier (vB) |
+| Protocol                     | Prover (vB) | Verifier (vB) |
 |------------------------------|-------------|---------------|
 | Funding                      | 121.25      | –             |
 | Hash Result Revelation       | 2270        | –             |
@@ -96,6 +96,11 @@ For the table above we calculated the costs (in sats) using an average of the me
 | Search Choice Iterations     | –           | 1194.5        |
 | Trigger Exec Challenge       | –           | 6060          |
 | **TOTAL per Player**        | **75301.25**| **7908.25**   |
+
+- Cost per player with network fee == 2.4 sat/vB
+  - Prover: `75301.25 vB * 2.4 sat = 180723 sat == ~ $ 158`
+  - Verifier: `7908.25 * 2.4 sat = 18979.8 sat == ~ $ 17`
+  - TOTAL: `83209.5 == ~ $ 175`
 
 ## Build Logs
 
